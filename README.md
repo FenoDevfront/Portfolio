@@ -64,7 +64,3 @@ Portfolio/
 - **Téléphone** : +261 34 44 164 05
 - **GitHub** : [FenoDevfront](https://github.com/FenoDevfront)
 - **Localisation** : Antananarivo, Madagascar
-
-## Licence
-
-MIT License - Libre d'utilisation et de modification.
