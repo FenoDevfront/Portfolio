@@ -93,13 +93,13 @@ function App() {
             },
             {
               id: 3,
-              name: "Kolore Architecture",
+              name: "MGB Enveloppe",
               type: "Site Vitrine",
-              url: "https://kolore-architecture.fr",
-              description: "Site institutionnel pour cabinet d'architecture français. Galerie dynamique, formulaire contact, optimisation SEO.",
+              url: "https://www.mgbenveloppe.com/",
+              description: "Site corporate pour entreprise industrielle française spécialisée en enveloppes de bâtiment. Design moderne, responsive.",
               technologies: ["WordPress", "Elementor", "PHP", "SEO"],
-              image: "architecture",
-              imageUrl: "/images/kolore.svg"
+              image: "industrial",
+              imageUrl: "/images/mgb.svg"
             },
             {
               id: 4,

@@ -65,9 +65,9 @@ const translations = {
         description: "CRM full-stack gérant +500 clients et commandes. Tableau de bord analytics, gestion des rôles, API REST sécurisée.",
       },
       {
-        name: "Kolore Architecture",
+        name: "MGB Enveloppe",
         type: "Site Vitrine",
-        description: "Site institutionnel pour cabinet d'architecture français. Galerie dynamique, formulaire contact, optimisation SEO.",
+        description: "Site corporate pour entreprise industrielle française spécialisée en enveloppes de bâtiment. Design moderne, responsive.",
       },
       {
         name: "Madabio",
@@ -218,9 +218,9 @@ const translations = {
         description: "Full-stack CRM managing 500+ clients and orders. Analytics dashboard, role management, secure REST API.",
       },
       {
-        name: "Kolore Architecture",
+        name: "MGB Enveloppe",
         type: "Showcase Website",
-        description: "Institutional website for a French architecture firm. Dynamic gallery, contact form, SEO optimization.",
+        description: "Corporate website for French industrial company specialized in building envelopes. Modern design, responsive.",
       },
       {
         name: "Madabio",
