@@ -99,6 +99,31 @@
   background: rgba(255, 255, 255, 0.05);
 }
 
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  margin-left: 8px;
+}
+
+.lang-btn:hover {
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.lang-btn svg {
+  font-size: 1rem;
+}
+
 .mobile-menu-btn {
   display: none;
   background: transparent;
@@ -129,6 +154,26 @@
   color: var(--light);
   background: rgba(255, 255, 255, 0.05);
   padding-left: 32px;
+}
+
+.mobile-lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.mobile-lang-btn svg {
+  font-size: 1.2rem;
 }
 
 @media (max-width: 900px) {

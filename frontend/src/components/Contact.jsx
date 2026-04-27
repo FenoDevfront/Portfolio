@@ -5,9 +5,11 @@ import {
   FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub,
   FaLinkedin, FaPaperPlane
 } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './Contact.css';
 
 const Contact = ({ personal }) => {
+  const { t } = useLanguage();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -31,12 +33,12 @@ const Contact = ({ personal }) => {
     }
 
     if (!emailRegex.test(email)) {
-      return 'Format email invalide. Exemple: votre@gmail.com';
+      return t('contact.emailError');
     }
 
     const domain = email.split('@')[1]?.toLowerCase();
     if (!domain || domain.length < 4) {
-      return 'Domaine email invalide. Exemple: @gmail.com, @yahoo.com';
+      return t('contact.domainError');
     }
 
     return '';
@@ -73,9 +75,9 @@ const Contact = ({ personal }) => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Me Contacter</h2>
+          <h2 className="section-title">{t('contact.title')}</h2>
           <p className="section-subtitle">
-            Discutons de votre prochain projet
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -86,10 +88,9 @@ const Contact = ({ personal }) => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3>Travaillons ensemble</h3>
+            <h3>{t('contact.workTogether')}</h3>
             <p>
-              Je suis disponible pour des projets freelance, des opportunités
-              d'emploi ou simplement pour discuter. N'hésitez pas à me contacter.
+              {t('contact.description')}
             </p>
 
             <div className="contact-details">
@@ -102,7 +103,7 @@ const Contact = ({ personal }) => {
                   <FaEnvelope />
                 </div>
                 <div className="contact-text">
-                  <span className="contact-label">Email</span>
+                  <span className="contact-label">{t('contact.email')}</span>
                   <span className="contact-value">{personal?.email}</span>
                 </div>
               </motion.a>
@@ -118,7 +119,7 @@ const Contact = ({ personal }) => {
                   <FaPhone />
                 </div>
                 <div className="contact-text">
-                  <span className="contact-label">WhatsApp</span>
+                  <span className="contact-label">{t('contact.whatsapp')}</span>
                   <span className="contact-value">{personal?.phone}</span>
                 </div>
               </motion.a>
@@ -131,7 +132,7 @@ const Contact = ({ personal }) => {
                   <FaMapMarkerAlt />
                 </div>
                 <div className="contact-text">
-                  <span className="contact-label">Localisation</span>
+                  <span className="contact-label">{t('contact.location')}</span>
                   <span className="contact-value">{personal?.location}</span>
                 </div>
               </motion.div>
@@ -170,7 +171,7 @@ const Contact = ({ personal }) => {
           >
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="name">Nom complet</label>
+                <label htmlFor="name">{t('contact.fullName')}</label>
                 <input
                   type="text"
                   id="name"
@@ -178,11 +179,11 @@ const Contact = ({ personal }) => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Votre nom"
+                  placeholder={t('contact.yourName')}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{t('contact.email')}</label>
                 <input
                   type="email"
                   id="email"
@@ -190,7 +191,7 @@ const Contact = ({ personal }) => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="votre@email.com"
+                  placeholder={t('contact.yourEmail')}
                   className={emailError ? 'input-error' : ''}
                 />
                 {emailError && (
@@ -199,7 +200,7 @@ const Contact = ({ personal }) => {
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="subject">Sujet</label>
+              <label htmlFor="subject">{t('contact.subject')}</label>
               <input
                 type="text"
                 id="subject"
@@ -207,11 +208,11 @@ const Contact = ({ personal }) => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                placeholder="Sujet de votre message"
+                placeholder={t('contact.subjectPlaceholder')}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{t('contact.message')}</label>
               <textarea
                 id="message"
                 name="message"
@@ -219,7 +220,7 @@ const Contact = ({ personal }) => {
                 onChange={handleChange}
                 required
                 rows="5"
-                placeholder="Décrivez votre projet..."
+                placeholder={t('contact.messagePlaceholder')}
               />
             </div>
             <motion.button
@@ -229,14 +230,14 @@ const Contact = ({ personal }) => {
               whileTap={{ scale: 0.98 }}
             >
               <FaPaperPlane />
-              Envoyer le message
+              {t('contact.send')}
             </motion.button>
           </motion.form>
         </div>
       </div>
 
       <footer className="footer">
-        <p>&copy; 2025 Portfolio | {personal?.name}. Tous droits réservés.</p>
+        <p>&copy; 2025 Portfolio | {personal?.name}. {t('footer.rights')}.</p>
       </footer>
     </section>
   );

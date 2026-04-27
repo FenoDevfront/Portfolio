@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useLanguage } from '../context/LanguageContext';
 import {
   FaHtml5, FaCss3Alt, FaJs, FaPhp, FaPython, FaWordpress,
   FaLinux, FaGitAlt, FaGithub, FaServer, FaDatabase,
@@ -66,10 +67,20 @@ const categoryColors = {
 };
 
 const Skills = ({ skills }) => {
+  const { t } = useLanguage();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const categoryLabelsTranslated = {
+    frontend: t('skills.frontend'),
+    backend: t('skills.backend'),
+    cms: t('skills.cms'),
+    devops: t('skills.devops'),
+    methodologies: t('skills.methodologies'),
+    tools: t('skills.tools'),
+  };
 
   return (
     <section id="skills" className="skills section" ref={ref}>
@@ -80,9 +91,9 @@ const Skills = ({ skills }) => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Compétences Techniques</h2>
+          <h2 className="section-title">{t('skills.title')}</h2>
           <p className="section-subtitle">
-            Les technologies et outils que je maîtrise
+            {t('skills.subtitle')}
           </p>
         </motion.div>
 
@@ -99,7 +110,7 @@ const Skills = ({ skills }) => {
                 className="category-header"
                 style={{ background: categoryColors[category] }}
               >
-                <h3>{categoryLabels[category]}</h3>
+                <h3>{categoryLabelsTranslated[category] || categoryLabels[category]}</h3>
               </div>
               <div className="skills-list">
                 {skillList.map((skill, index) => {

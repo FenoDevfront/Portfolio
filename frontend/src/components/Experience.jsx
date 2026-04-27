@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaBriefcase, FaChevronRight } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './Experience.css';
 
 const Experience = ({ experiences }) => {
+  const { t } = useLanguage();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -18,9 +20,9 @@ const Experience = ({ experiences }) => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Expérience Professionnelle</h2>
+          <h2 className="section-title">{t('experience.title')}</h2>
           <p className="section-subtitle">
-            Mon parcours dans le développement web et la gestion de projets
+            {t('experience.subtitle')}
           </p>
         </motion.div>
 

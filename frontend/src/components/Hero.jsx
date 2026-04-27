@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaArrowDown, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
 const Hero = ({ personal }) => {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="hero">
       <div className="hero-bg">
@@ -40,7 +43,7 @@ const Hero = ({ personal }) => {
           transition={{ duration: 0.5 }}
         >
           <span className="badge-dot"></span>
-          Disponible pour de nouveaux projets
+          {t('hero.available')}
         </motion.div>
 
         <motion.h1
@@ -135,7 +138,7 @@ const Hero = ({ personal }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Voir mes projets
+            {t('hero.viewProjects')}
           </motion.a>
           <motion.a
             href="#contact"
@@ -143,7 +146,7 @@ const Hero = ({ personal }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Me contacter
+            {t('hero.contactMe')}
           </motion.a>
         </motion.div>
 
@@ -155,15 +158,15 @@ const Hero = ({ personal }) => {
         >
           <div className="stat">
             <span className="stat-number">3+</span>
-            <span className="stat-label">Années d'expérience</span>
+            <span className="stat-label">{t('hero.yearsExp')}</span>
           </div>
           <div className="stat">
             <span className="stat-number">8+</span>
-            <span className="stat-label">Projets livrés</span>
+            <span className="stat-label">{t('hero.projectsDelivered')}</span>
           </div>
           <div className="stat">
-            <span className="stat-number">100%</span>
-            <span className="stat-label">Clients satisfaits</span>
+            <span className="stat-number">95%</span>
+            <span className="stat-label">{t('hero.satisfaction')}</span>
           </div>
         </motion.div>
       </div>

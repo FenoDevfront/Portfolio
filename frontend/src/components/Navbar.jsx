@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +18,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Accueil' },
-    { href: '#about', label: 'À propos' },
-    { href: '#experience', label: 'Expérience' },
-    { href: '#projects', label: 'Projets' },
-    { href: '#skills', label: 'Compétences' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: t('nav.home') },
+    { href: '#about', label: t('nav.about') },
+    { href: '#experience', label: t('nav.experience') },
+    { href: '#projects', label: t('nav.projects') },
+    { href: '#skills', label: t('nav.skills') },
+    { href: '#contact', label: t('nav.contact') },
   ];
 
   return (
@@ -56,6 +58,18 @@ const Navbar = () => {
               {link.label}
             </motion.a>
           ))}
+          <motion.button
+            className="lang-btn"
+            onClick={toggleLanguage}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <FaGlobe />
+            <span>{language.toUpperCase()}</span>
+          </motion.button>
         </div>
 
         <motion.button
@@ -89,6 +103,16 @@ const Navbar = () => {
                 {link.label}
               </motion.a>
             ))}
+            <motion.button
+              className="mobile-lang-btn"
+              onClick={toggleLanguage}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <FaGlobe />
+              <span>{language === 'fr' ? 'English' : 'Français'}</span>
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaGraduationCap, FaLanguage } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './About.css';
 
 const About = ({ personal, education, languages }) => {
+  const { t } = useLanguage();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -18,9 +20,9 @@ const About = ({ personal, education, languages }) => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">À propos de moi</h2>
+          <h2 className="section-title">{t('about.title')}</h2>
           <p className="section-subtitle">
-            Passionné par le développement web et la gestion de projets
+            {t('about.subtitle')}
           </p>
         </motion.div>
 
@@ -31,20 +33,20 @@ const About = ({ personal, education, languages }) => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3>Mon parcours</h3>
+            <h3>{t('about.journey')}</h3>
             <p>{personal?.summary}</p>
             <div className="about-highlights">
               <div className="highlight">
                 <span className="highlight-number">3+</span>
-                <span className="highlight-text">Années d'expérience</span>
+                <span className="highlight-text">{t('about.yearsExp')}</span>
               </div>
               <div className="highlight">
                 <span className="highlight-number">8+</span>
-                <span className="highlight-text">Sites livrés</span>
+                <span className="highlight-text">{t('about.sitesDelivered')}</span>
               </div>
               <div className="highlight">
                 <span className="highlight-number">2</span>
-                <span className="highlight-text">Entreprises</span>
+                <span className="highlight-text">{t('about.companies')}</span>
               </div>
             </div>
           </motion.div>
@@ -58,7 +60,7 @@ const About = ({ personal, education, languages }) => {
             >
               <div className="card-header">
                 <FaGraduationCap className="card-icon" />
-                <h3>Formation</h3>
+                <h3>{t('about.education')}</h3>
               </div>
               <div className="education-list">
                 {education?.map((edu, index) => (
@@ -79,7 +81,7 @@ const About = ({ personal, education, languages }) => {
             >
               <div className="card-header">
                 <FaLanguage className="card-icon" />
-                <h3>Langues</h3>
+                <h3>{t('about.languages')}</h3>
               </div>
               <div className="languages-list">
                 {languages?.map((lang, index) => (

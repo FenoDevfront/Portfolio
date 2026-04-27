@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaExternalLinkAlt, FaBuilding, FaShoppingCart, FaChartLine, FaCode, FaGithub } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './Projects.css';
 
 const projectIcons = {
@@ -12,6 +13,7 @@ const projectIcons = {
 };
 
 const Projects = ({ projects }) => {
+  const { t } = useLanguage();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -36,9 +38,9 @@ const Projects = ({ projects }) => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Projets Réalisés</h2>
+          <h2 className="section-title">{t('projects.title')}</h2>
           <p className="section-subtitle">
-            Une sélection de mes meilleurs projets web
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
@@ -79,7 +81,7 @@ const Projects = ({ projects }) => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        Voir le projet <FaExternalLinkAlt />
+                        {t('projects.viewProject')} <FaExternalLinkAlt />
                       </motion.a>
                     )}
                     {project.github && (
@@ -91,7 +93,7 @@ const Projects = ({ projects }) => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        Code source <FaGithub />
+                        {t('projects.sourceCode')} <FaGithub />
                       </motion.a>
                     )}
                   </div>
