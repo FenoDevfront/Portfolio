@@ -73,16 +73,25 @@ function App() {
           projects: [
             {
               id: 1,
+              name: "Portfolio Personnel",
+              type: "Application Web",
+              url: "https://fenodevfront.github.io/Portfolio",
+              github: "https://github.com/FenoDevfront/Portfolio",
+              description: "Portfolio moderne avec React et Vite. Design glassmorphism, animations Framer Motion, responsive.",
+              technologies: ["React", "Vite", "Framer Motion", "CSS3"],
+              image: "portfolio"
+            },
+            {
+              id: 2,
               name: "TastyCrave CRM",
               type: "Application Web",
               url: "https://tastycrave-crm.onrender.com",
-              github: "https://github.com/FenoDevfront/tastycrave-crm",
               description: "CRM full-stack gérant +500 clients et commandes. Tableau de bord analytics, gestion des rôles, API REST sécurisée.",
               technologies: ["Python", "Flask", "API REST", "MySQL", "JavaScript", "Docker"],
               image: "crm"
             },
             {
-              id: 2,
+              id: 3,
               name: "Kolore Architecture",
               type: "Site Vitrine",
               url: "https://kolore-architecture.fr",
@@ -91,22 +100,13 @@ function App() {
               image: "architecture"
             },
             {
-              id: 3,
+              id: 4,
               name: "Madabio",
               type: "E-commerce",
               url: "https://codal-madagascar.com/madabio",
               description: "Boutique en ligne produits bio malgaches. Catalogue +200 produits, paiement sécurisé, gestion stocks.",
               technologies: ["WordPress", "WooCommerce", "ACF", "E-commerce"],
               image: "ecommerce"
-            },
-            {
-              id: 4,
-              name: "MGB Enveloppe",
-              type: "Site Vitrine",
-              url: "https://mgbenveloppe.com",
-              description: "Site corporate pour une entreprise industrielle. Conception et intégration avec WordPress et Elementor.",
-              technologies: ["WordPress", "Elementor", "cPanel"],
-              image: "industrial"
             }
           ],
           skills: {

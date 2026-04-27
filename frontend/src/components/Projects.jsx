@@ -4,6 +4,7 @@ import { FaExternalLinkAlt, FaBuilding, FaShoppingCart, FaChartLine, FaCode, FaG
 import './Projects.css';
 
 const projectIcons = {
+  portfolio: FaCode,
   architecture: FaBuilding,
   industrial: FaBuilding,
   ecommerce: FaShoppingCart,
