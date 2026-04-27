@@ -70,16 +70,18 @@ const Projects = ({ projects }) => {
                     ))}
                   </div>
                   <div className="project-links">
-                    <motion.a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Voir le projet <FaExternalLinkAlt />
-                    </motion.a>
+                    {project.url && (
+                      <motion.a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Voir le projet <FaExternalLinkAlt />
+                      </motion.a>
+                    )}
                     {project.github && (
                       <motion.a
                         href={project.github}

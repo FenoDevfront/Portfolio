@@ -75,7 +75,6 @@ function App() {
               id: 1,
               name: "Portfolio Personnel",
               type: "Application Web",
-              url: "https://fenodevfront.github.io/Portfolio",
               github: "https://github.com/FenoDevfront/Portfolio",
               description: "Portfolio moderne avec React et Vite. Design glassmorphism, animations Framer Motion, responsive.",
               technologies: ["React", "Vite", "Framer Motion", "CSS3"],
