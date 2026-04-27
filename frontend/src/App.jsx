@@ -78,7 +78,8 @@ function App() {
               github: "https://github.com/FenoDevfront/Portfolio",
               description: "Portfolio moderne avec React et Vite. Design glassmorphism, animations Framer Motion, responsive.",
               technologies: ["React", "Vite", "Framer Motion", "CSS3"],
-              image: "portfolio"
+              image: "portfolio",
+              imageUrl: "/images/portfolio.svg"
             },
             {
               id: 2,
@@ -87,7 +88,8 @@ function App() {
               url: "https://tastycrave-crm.onrender.com",
               description: "CRM full-stack gérant +500 clients et commandes. Tableau de bord analytics, gestion des rôles, API REST sécurisée.",
               technologies: ["Python", "Flask", "API REST", "MySQL", "JavaScript", "Docker"],
-              image: "crm"
+              image: "crm",
+              imageUrl: "/images/tastycrave.svg"
             },
             {
               id: 3,
@@ -96,7 +98,8 @@ function App() {
               url: "https://kolore-architecture.fr",
               description: "Site institutionnel pour cabinet d'architecture français. Galerie dynamique, formulaire contact, optimisation SEO.",
               technologies: ["WordPress", "Elementor", "PHP", "SEO"],
-              image: "architecture"
+              image: "architecture",
+              imageUrl: "/images/kolore.svg"
             },
             {
               id: 4,
@@ -105,7 +108,8 @@ function App() {
               url: "https://codal-madagascar.com/madabio",
               description: "Boutique en ligne produits bio malgaches. Catalogue +200 produits, paiement sécurisé, gestion stocks.",
               technologies: ["WordPress", "WooCommerce", "ACF", "E-commerce"],
-              image: "ecommerce"
+              image: "ecommerce",
+              imageUrl: "/images/madabio.svg"
             }
           ],
           skills: {

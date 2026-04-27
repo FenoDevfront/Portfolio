@@ -63,7 +63,18 @@ const Projects = ({ projects }) => {
                   className="project-image"
                   style={{ background: getGradient(index) }}
                 >
-                  <IconComponent className="project-icon" />
+                  {project.imageUrl ? (
+                    <img
+                      src={project.imageUrl}
+                      alt={translated.name || project.name}
+                      className="project-img"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'block';
+                      }}
+                    />
+                  ) : null}
+                  <IconComponent className="project-icon" style={{ display: project.imageUrl ? 'none' : 'block' }} />
                   <span className="project-type">{translated.type || project.type}</span>
                 </div>
                 <div className="project-content">
