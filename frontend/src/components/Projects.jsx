@@ -19,6 +19,8 @@ const Projects = ({ projects }) => {
     threshold: 0.1,
   });
 
+  const translatedProjects = t('projectsList');
+
   const getGradient = (index) => {
     const gradients = [
       'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -47,6 +49,7 @@ const Projects = ({ projects }) => {
         <div className="projects-grid">
           {projects?.map((project, index) => {
             const IconComponent = projectIcons[project.image] || FaCode;
+            const translated = translatedProjects?.[index] || {};
             return (
               <motion.div
                 key={project.id}
@@ -61,11 +64,11 @@ const Projects = ({ projects }) => {
                   style={{ background: getGradient(index) }}
                 >
                   <IconComponent className="project-icon" />
-                  <span className="project-type">{project.type}</span>
+                  <span className="project-type">{translated.type || project.type}</span>
                 </div>
                 <div className="project-content">
-                  <h3 className="project-name">{project.name}</h3>
-                  <p className="project-description">{project.description}</p>
+                  <h3 className="project-name">{translated.name || project.name}</h3>
+                  <p className="project-description">{translated.description || project.description}</p>
                   <div className="project-technologies">
                     {project.technologies?.map((tech, i) => (
                       <span key={i} className="tech-tag">{tech}</span>

@@ -11,6 +11,8 @@ const Experience = ({ experiences }) => {
     threshold: 0.1,
   });
 
+  const translatedExperiences = t('experiences');
+
   return (
     <section id="experience" className="experience section" ref={ref}>
       <div className="container">
@@ -27,7 +29,7 @@ const Experience = ({ experiences }) => {
         </motion.div>
 
         <div className="timeline">
-          {experiences?.map((exp, index) => (
+          {translatedExperiences?.map((exp, index) => (
             <motion.div
               key={exp.id}
               className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}

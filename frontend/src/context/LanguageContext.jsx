@@ -11,6 +11,81 @@ const translations = {
       skills: 'Compétences',
       contact: 'Contact',
     },
+    // Personal
+    personal: {
+      title: 'Chef de projet & Développeur Web Full-Stack',
+      summary: "+8 sites web livrés avec un taux de satisfaction client de 95%. Chef de projet et développeur full-stack avec 3+ ans d'expérience, je pilote des projets web de A à Z : de la conception technique au déploiement en production. Expert WordPress/WooCommerce et Python/Flask, j'applique les méthodologies Agile/Scrum pour livrer des solutions performantes dans les délais.",
+    },
+    // Experiences
+    experiences: [
+      {
+        title: "Chef de Projet & Validateur Web",
+        company: "Tsarajoro",
+        period: "Déc 2024 – Présent",
+        tasks: [
+          "Supervision technique d'une équipe de 4 développeurs, 3 techniciens et 5 VA pour un site blog multi-auteurs",
+          "Pilotage Agile (sprints de 2 semaines) : 100% des livrables dans les délais",
+          "Déploiement serveur et optimisation SEO : +40% de trafic organique en 2 mois",
+          "Mise en place de revues de code et CI/CD avec GitHub Actions"
+        ]
+      },
+      {
+        title: "Développeur Front-end",
+        company: "Tsarajoro",
+        period: "Mai 2024 – Nov 2024",
+        tasks: [
+          "Développement d'interfaces responsive (HTML5, CSS3, JavaScript) avec intégration pixel-perfect",
+          "Optimisation performances web (Performance, Accessibilité, SEO)",
+          "Intégration d'API REST pour le système de commentaires et authentification",
+          "Réduction du temps de chargement de 3.2s à 1.4s via lazy loading et compression"
+        ]
+      },
+      {
+        title: "Intégrateur WordPress",
+        company: "Netykom",
+        period: "Avr 2023 – Avr 2024",
+        tasks: [
+          "Conception et livraison de +8 sites WordPress (vitrines et e-commerce WooCommerce)",
+          "Développement de thèmes et plugins personnalisés en PHP : 95% de satisfaction client",
+          "Gestion hébergements (cPanel), déploiement FTP/SSH, configuration serveurs Linux",
+          "Formation clients à l'administration WordPress : 100% autonomes après livraison"
+        ]
+      }
+    ],
+    // Projects
+    projectsList: [
+      {
+        name: "Portfolio Personnel",
+        type: "Application Web",
+        description: "Portfolio moderne avec React et Vite. Design glassmorphism, animations Framer Motion, responsive.",
+      },
+      {
+        name: "TastyCrave CRM",
+        type: "Application Web",
+        description: "CRM full-stack gérant +500 clients et commandes. Tableau de bord analytics, gestion des rôles, API REST sécurisée.",
+      },
+      {
+        name: "Kolore Architecture",
+        type: "Site Vitrine",
+        description: "Site institutionnel pour cabinet d'architecture français. Galerie dynamique, formulaire contact, optimisation SEO.",
+      },
+      {
+        name: "Madabio",
+        type: "E-commerce",
+        description: "Boutique en ligne produits bio malgaches. Catalogue +200 produits, paiement sécurisé, gestion stocks.",
+      }
+    ],
+    // Education
+    education: [
+      { school: "École Supérieure de Multimédia", period: "2021 – 2023", location: "Antananarivo, Madagascar" },
+      { school: "Lycée Saint-Michel Itaosy", period: "2018 – 2021", location: "Baccalauréat" }
+    ],
+    // Languages
+    langList: [
+      { name: "Malgache", level: "Langue maternelle" },
+      { name: "Français", level: "Courant" },
+      { name: "Anglais", level: "Technique" }
+    ],
     // Hero
     hero: {
       available: 'Disponible pour de nouveaux projets',
@@ -89,6 +164,81 @@ const translations = {
       skills: 'Skills',
       contact: 'Contact',
     },
+    // Personal
+    personal: {
+      title: 'Project Manager & Full-Stack Web Developer',
+      summary: "+8 websites delivered with 95% client satisfaction rate. Project manager and full-stack developer with 3+ years of experience, I manage web projects from A to Z: from technical design to production deployment. Expert in WordPress/WooCommerce and Python/Flask, I apply Agile/Scrum methodologies to deliver high-performance solutions on time.",
+    },
+    // Experiences
+    experiences: [
+      {
+        title: "Project Manager & Web Validator",
+        company: "Tsarajoro",
+        period: "Dec 2024 – Present",
+        tasks: [
+          "Technical supervision of a team of 4 developers, 3 technicians and 5 VAs for a multi-author blog site",
+          "Agile management (2-week sprints): 100% of deliverables on time",
+          "Server deployment and SEO optimization: +40% organic traffic in 2 months",
+          "Implementation of code reviews and CI/CD with GitHub Actions"
+        ]
+      },
+      {
+        title: "Front-end Developer",
+        company: "Tsarajoro",
+        period: "May 2024 – Nov 2024",
+        tasks: [
+          "Development of responsive interfaces (HTML5, CSS3, JavaScript) with pixel-perfect integration",
+          "Web performance optimization (Performance, Accessibility, SEO)",
+          "REST API integration for comments and authentication system",
+          "Load time reduction from 3.2s to 1.4s via lazy loading and compression"
+        ]
+      },
+      {
+        title: "WordPress Integrator",
+        company: "Netykom",
+        period: "Apr 2023 – Apr 2024",
+        tasks: [
+          "Design and delivery of 8+ WordPress sites (showcases and WooCommerce e-commerce)",
+          "Development of custom themes and plugins in PHP: 95% client satisfaction",
+          "Hosting management (cPanel), FTP/SSH deployment, Linux server configuration",
+          "Client training in WordPress administration: 100% autonomous after delivery"
+        ]
+      }
+    ],
+    // Projects
+    projectsList: [
+      {
+        name: "Personal Portfolio",
+        type: "Web Application",
+        description: "Modern portfolio with React and Vite. Glassmorphism design, Framer Motion animations, responsive.",
+      },
+      {
+        name: "TastyCrave CRM",
+        type: "Web Application",
+        description: "Full-stack CRM managing 500+ clients and orders. Analytics dashboard, role management, secure REST API.",
+      },
+      {
+        name: "Kolore Architecture",
+        type: "Showcase Website",
+        description: "Institutional website for a French architecture firm. Dynamic gallery, contact form, SEO optimization.",
+      },
+      {
+        name: "Madabio",
+        type: "E-commerce",
+        description: "Online store for Malagasy organic products. Catalog of 200+ products, secure payment, stock management.",
+      }
+    ],
+    // Education
+    education: [
+      { school: "Multimedia Higher School", period: "2021 – 2023", location: "Antananarivo, Madagascar" },
+      { school: "Saint-Michel Itaosy High School", period: "2018 – 2021", location: "Baccalaureate" }
+    ],
+    // Languages
+    langList: [
+      { name: "Malagasy", level: "Native language" },
+      { name: "French", level: "Fluent" },
+      { name: "English", level: "Technical" }
+    ],
     // Hero
     hero: {
       available: 'Available for new projects',

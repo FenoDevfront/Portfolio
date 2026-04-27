@@ -62,7 +62,7 @@ const Hero = ({ personal }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <span className="typing-text">{personal?.title || 'Chef de projet & Développeur Web'}</span>
+          <span className="typing-text">{t('personal.title')}</span>
         </motion.div>
 
         <motion.p
@@ -71,7 +71,7 @@ const Hero = ({ personal }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          {personal?.summary}
+          {t('personal.summary')}
         </motion.p>
 
         <motion.div

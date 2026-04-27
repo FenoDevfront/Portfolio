@@ -11,6 +11,10 @@ const About = ({ personal, education, languages }) => {
     threshold: 0.1,
   });
 
+  const translatedEducation = t('education');
+  const translatedLanguages = t('langList');
+  const percentages = [100, 90, 70];
+
   return (
     <section id="about" className="about section" ref={ref}>
       <div className="container">
@@ -34,7 +38,7 @@ const About = ({ personal, education, languages }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3>{t('about.journey')}</h3>
-            <p>{personal?.summary}</p>
+            <p>{t('personal.summary')}</p>
             <div className="about-highlights">
               <div className="highlight">
                 <span className="highlight-number">3+</span>
@@ -63,8 +67,8 @@ const About = ({ personal, education, languages }) => {
                 <h3>{t('about.education')}</h3>
               </div>
               <div className="education-list">
-                {education?.map((edu, index) => (
-                  <div key={edu.id || index} className="education-item">
+                {translatedEducation?.map((edu, index) => (
+                  <div key={index} className="education-item">
                     <span className="edu-period">{edu.period}</span>
                     <h4>{edu.school}</h4>
                     <p>{edu.location}</p>
@@ -84,7 +88,7 @@ const About = ({ personal, education, languages }) => {
                 <h3>{t('about.languages')}</h3>
               </div>
               <div className="languages-list">
-                {languages?.map((lang, index) => (
+                {translatedLanguages?.map((lang, index) => (
                   <div key={index} className="language-item">
                     <div className="language-info">
                       <span className="language-name">{lang.name}</span>
@@ -94,7 +98,7 @@ const About = ({ personal, education, languages }) => {
                       <motion.div
                         className="language-progress"
                         initial={{ width: 0 }}
-                        animate={inView ? { width: `${lang.percentage}%` } : {}}
+                        animate={inView ? { width: `${percentages[index]}%` } : {}}
                         transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
                       />
                     </div>
