@@ -143,6 +143,34 @@
   background: rgba(99, 102, 241, 0.05);
 }
 
+.form-group input.input-error {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.form-group input.input-error:focus {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.error-message {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #f87171;
+  font-size: 0.85rem;
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
 .submit-btn {
   width: 100%;
   display: flex;

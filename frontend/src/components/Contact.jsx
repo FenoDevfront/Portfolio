@@ -20,12 +20,46 @@ const Contact = ({ personal }) => {
     message: '',
   });
 
+  const [emailError, setEmailError] = useState('');
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const validDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'mail.com', 'protonmail.com'];
+
+    if (!email) {
+      return '';
+    }
+
+    if (!emailRegex.test(email)) {
+      return 'Format email invalide. Exemple: votre@gmail.com';
+    }
+
+    const domain = email.split('@')[1]?.toLowerCase();
+    if (!domain || domain.length < 4) {
+      return 'Domaine email invalide. Exemple: @gmail.com, @yahoo.com';
+    }
+
+    return '';
+  };
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+    if (name === 'email') {
+      setEmailError(validateEmail(value));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const error = validateEmail(formData.email);
+    if (error) {
+      setEmailError(error);
+      return;
+    }
+
     const mailtoLink = `mailto:${personal?.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Nom: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
     window.location.href = mailtoLink;
   };
@@ -157,7 +191,11 @@ const Contact = ({ personal }) => {
                   onChange={handleChange}
                   required
                   placeholder="votre@email.com"
+                  className={emailError ? 'input-error' : ''}
                 />
+                {emailError && (
+                  <span className="error-message">{emailError}</span>
+                )}
               </div>
             </div>
             <div className="form-group">
