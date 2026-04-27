@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaArrowDown } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaArrowDown, FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = ({ personal }) => {
@@ -81,14 +81,46 @@ const Hero = ({ personal }) => {
             <FaMapMarkerAlt className="info-icon" />
             <span>{personal?.location || 'Antananarivo, Madagascar'}</span>
           </div>
-          <div className="info-item">
+          <a
+            href={`https://wa.me/${personal?.phone?.replace(/[^0-9]/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="info-item info-link"
+          >
             <FaPhone className="info-icon" />
             <span>{personal?.phone}</span>
-          </div>
-          <div className="info-item">
+          </a>
+          <a
+            href={`mailto:${personal?.email}`}
+            className="info-item info-link"
+          >
             <FaEnvelope className="info-icon" />
             <span>{personal?.email}</span>
-          </div>
+          </a>
+        </motion.div>
+
+        <motion.div
+          className="hero-social"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
+        >
+          <a
+            href={personal?.github || "https://github.com/FenoDevfront/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href={personal?.linkedin || "https://mg.linkedin.com/in/feno-niaina-ratsimbaharisoa-b584012a2"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+          >
+            <FaLinkedin />
+          </a>
         </motion.div>
 
         <motion.div

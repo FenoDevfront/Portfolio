@@ -28,7 +28,8 @@ function App() {
             phone: "+261 34 44 164 05",
             email: "sabmistar@gmail.com",
             location: "Antananarivo, Madagascar",
-            github: "github.com/FenoDevfront",
+            github: "https://github.com/FenoDevfront/",
+            linkedin: "https://mg.linkedin.com/in/feno-niaina-ratsimbaharisoa-b584012a2",
             summary: "+8 sites web livrés avec un taux de satisfaction client de 95%. Chef de projet et développeur full-stack avec 3+ ans d'expérience, je pilote des projets web de A à Z : de la conception technique au déploiement en production. Expert WordPress/WooCommerce et Python/Flask, j'applique les méthodologies Agile/Scrum pour livrer des solutions performantes dans les délais."
           },
           experiences: [

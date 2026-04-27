@@ -74,7 +74,9 @@ const Contact = ({ personal }) => {
               </motion.a>
 
               <motion.a
-                href={`tel:${personal?.phone}`}
+                href={`https://wa.me/${personal?.phone?.replace(/[^0-9]/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="contact-item glass-card"
                 whileHover={{ scale: 1.02, x: 10 }}
               >
@@ -82,7 +84,7 @@ const Contact = ({ personal }) => {
                   <FaPhone />
                 </div>
                 <div className="contact-text">
-                  <span className="contact-label">Téléphone</span>
+                  <span className="contact-label">WhatsApp</span>
                   <span className="contact-value">{personal?.phone}</span>
                 </div>
               </motion.a>
@@ -103,7 +105,9 @@ const Contact = ({ personal }) => {
 
             <div className="social-links">
               <motion.a
-                href="#"
+                href={personal?.github || "https://github.com/FenoDevfront/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-link"
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.9 }}
@@ -111,7 +115,9 @@ const Contact = ({ personal }) => {
                 <FaGithub />
               </motion.a>
               <motion.a
-                href="#"
+                href={personal?.linkedin || "https://mg.linkedin.com/in/feno-niaina-ratsimbaharisoa-b584012a2"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-link"
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.9 }}
