@@ -236,7 +236,7 @@ const Contact = ({ personal }) => {
       </div>
 
       <footer className="footer">
-        <p>&copy; 2024 {personal?.name}. Tous droits réservés.</p>
+        <p>&copy; 2025 Portfolio | {personal?.name}. Tous droits réservés.</p>
       </footer>
     </section>
   );
