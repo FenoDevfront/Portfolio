@@ -77,7 +77,7 @@ const translations = {
     ],
     // Education
     education: [
-      { school: "École Supérieure de Multimédia", period: "2021 – 2023", location: "Antananarivo, Madagascar" },
+      { school: "École Supérieure de Multimédia", degree: "DTS (Diplôme de Technicien Supérieur)", period: "2021 – 2023", location: "Antananarivo, Madagascar" },
       { school: "Lycée Saint-Michel Itaosy", period: "2018 – 2021", location: "Baccalauréat" }
     ],
     // Languages
@@ -230,7 +230,7 @@ const translations = {
     ],
     // Education
     education: [
-      { school: "Multimedia Higher School", period: "2021 – 2023", location: "Antananarivo, Madagascar" },
+      { school: "Multimedia Higher School", degree: "DTS (Higher Technician Diploma)", period: "2021 – 2023", location: "Antananarivo, Madagascar" },
       { school: "Saint-Michel Itaosy High School", period: "2018 – 2021", location: "Baccalaureate" }
     ],
     // Languages

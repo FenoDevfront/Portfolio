@@ -124,6 +124,7 @@ function App() {
             {
               id: 1,
               school: "Ecole Supérieure de Multimédia",
+              degree: "DTS (Diplôme de Technicien Supérieur)",
               period: "2021 – 2023",
               location: "Antananarivo, Madagascar"
             },
