@@ -92,7 +92,7 @@ portfolio_data = {
     "skills": {
         "frontend": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
         "backend": ["PHP", "Python (Flask)", "MySQL"],
-        "cms": ["WordPress", "Elementor", "WooCommerce", "ACF", "Plugins sur mesure"],
+        "cms": ["WordPress", "WooCommerce", "ACF", "Divi", "Kubio", "Page Builder", "Oxygen", "Thème Personnalisé", "Plugin Personnalisé"],
         "tools": ["Linux", "SSH", "cPanel", "Git", "GitHub"],
         "other": ["SEO technique", "Figma", "Optimisation performances"]
     },

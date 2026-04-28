@@ -71,6 +71,7 @@ const About = ({ personal, education, languages }) => {
                   <div key={index} className="education-item">
                     <span className="edu-period">{edu.period}</span>
                     <h4>{edu.school}</h4>
+                    {edu.degree && <p className="edu-degree">{edu.degree}</p>}
                     <p>{edu.location}</p>
                   </div>
                 ))}

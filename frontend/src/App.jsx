@@ -115,7 +115,7 @@ function App() {
           skills: {
             frontend: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "TypeScript (notions)"],
             backend: ["PHP", "Python (Flask)", "MySQL", "API REST", "Node.js (notions)"],
-            cms: ["WordPress", "Elementor", "WooCommerce", "ACF", "Plugins sur mesure"],
+            cms: ["WordPress", "WooCommerce", "ACF", "Divi", "Kubio", "Page Builder", "Oxygen", "Thème Personnalisé", "Plugin Personnalisé"],
             devops: ["Git/GitHub", "CI/CD (GitHub Actions)", "Linux", "SSH", "cPanel"],
             methodologies: ["Agile/Scrum", "Revue de code", "Tests fonctionnels", "SEO technique"],
             tools: ["Jira", "Trello", "Slack", "Discord", "Sentry", "Google Sheets"]
