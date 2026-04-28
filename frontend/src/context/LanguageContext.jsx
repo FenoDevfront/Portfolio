@@ -14,7 +14,7 @@ const translations = {
     // Personal
     personal: {
       title: 'Chef de projet & Développeur Web Full-Stack',
-      summary: "+8 sites web livrés avec un taux de satisfaction client de 95%. Chef de projet et développeur full-stack avec 3+ ans d'expérience, je pilote des projets web de A à Z : de la conception technique au déploiement en production. Expert WordPress/WooCommerce et Python/Flask, j'applique les méthodologies Agile/Scrum pour livrer des solutions performantes dans les délais.",
+      summary: "+8 sites web livrés avec un taux de satisfaction client de 95%. Chef de projet et développeur full-stack avec 3+ ans d'expérience, je pilote des projets web de A à Z : de la conception technique au déploiement en production. Spécialisé en WordPress/WooCommerce et Python/Flask, j'applique les méthodologies Agile/Scrum pour livrer des solutions performantes dans les délais.",
     },
     // Experiences
     experiences: [
@@ -167,7 +167,7 @@ const translations = {
     // Personal
     personal: {
       title: 'Project Manager & Full-Stack Web Developer',
-      summary: "+8 websites delivered with 95% client satisfaction rate. Project manager and full-stack developer with 3+ years of experience, I manage web projects from A to Z: from technical design to production deployment. Expert in WordPress/WooCommerce and Python/Flask, I apply Agile/Scrum methodologies to deliver high-performance solutions on time.",
+      summary: "+8 websites delivered with 95% client satisfaction rate. Project manager and full-stack developer with 3+ years of experience, I manage web projects from A to Z: from technical design to production deployment. Specialized in WordPress/WooCommerce and Python/Flask, I apply Agile/Scrum methodologies to deliver high-performance solutions on time.",
     },
     // Experiences
     experiences: [

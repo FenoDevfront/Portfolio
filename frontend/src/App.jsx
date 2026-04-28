@@ -30,7 +30,7 @@ function App() {
             location: "Antananarivo, Madagascar",
             github: "https://github.com/FenoDevfront/",
             linkedin: "https://mg.linkedin.com/in/feno-niaina-ratsimbaharisoa-b584012a2",
-            summary: "+8 sites web livrés avec un taux de satisfaction client de 95%. Chef de projet et développeur full-stack avec 3+ ans d'expérience, je pilote des projets web de A à Z : de la conception technique au déploiement en production. Expert WordPress/WooCommerce et Python/Flask, j'applique les méthodologies Agile/Scrum pour livrer des solutions performantes dans les délais."
+            summary: "+8 sites web livrés avec un taux de satisfaction client de 95%. Chef de projet et développeur full-stack avec 3+ ans d'expérience, je pilote des projets web de A à Z : de la conception technique au déploiement en production. Spécialisé en WordPress/WooCommerce et Python/Flask, j'applique les méthodologies Agile/Scrum pour livrer des solutions performantes dans les délais."
           },
           experiences: [
             {
@@ -87,7 +87,7 @@ function App() {
               type: "Application Web",
               url: "https://tastycrave-crm.onrender.com",
               description: "CRM full-stack gérant +500 clients et commandes. Tableau de bord analytics, gestion des rôles, API REST sécurisée.",
-              technologies: ["Python", "Flask", "API REST", "MySQL", "JavaScript", "Docker"],
+              technologies: ["Python", "Flask", "API REST", "MySQL", "JavaScript"],
               image: "crm",
               imageUrl: "/images/tastycrave.svg"
             },
@@ -116,7 +116,7 @@ function App() {
             frontend: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "TypeScript (notions)"],
             backend: ["PHP", "Python (Flask)", "MySQL", "API REST", "Node.js (notions)"],
             cms: ["WordPress", "Elementor", "WooCommerce", "ACF", "Plugins sur mesure"],
-            devops: ["Git/GitHub", "CI/CD (GitHub Actions)", "Docker", "Linux", "SSH", "cPanel"],
+            devops: ["Git/GitHub", "CI/CD (GitHub Actions)", "Linux", "SSH", "cPanel"],
             methodologies: ["Agile/Scrum", "Revue de code", "Tests fonctionnels", "SEO technique"],
             tools: ["Jira", "Trello", "Slack", "Discord", "Sentry", "Google Sheets"]
           },
