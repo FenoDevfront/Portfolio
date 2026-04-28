@@ -97,7 +97,7 @@ function App() {
               type: "Site Vitrine",
               url: "https://www.mgbenveloppe.com/",
               description: "Site corporate pour entreprise industrielle française spécialisée en enveloppes de bâtiment. Design moderne, responsive.",
-              technologies: ["WordPress", "Elementor", "PHP", "SEO"],
+              technologies: ["WordPress", "Divi", "PHP", "JavaScript", "jQuery", "SEO"],
               image: "industrial",
               imageUrl: "/images/mgb.svg"
             },
@@ -107,7 +107,7 @@ function App() {
               type: "E-commerce",
               url: "https://codal-madagascar.com/madabio",
               description: "Boutique en ligne produits bio malgaches. Catalogue +200 produits, paiement sécurisé, gestion stocks.",
-              technologies: ["WordPress", "WooCommerce", "ACF", "E-commerce"],
+              technologies: ["WordPress", "WooCommerce", "ACF", "JavaScript", "jQuery", "E-commerce"],
               image: "ecommerce",
               imageUrl: "/images/madabio.svg"
             }

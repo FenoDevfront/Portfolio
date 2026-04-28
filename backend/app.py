@@ -66,8 +66,8 @@ portfolio_data = {
             "name": "MGB Enveloppe",
             "type": "Site Vitrine",
             "url": "https://mgbenveloppe.com",
-            "description": "Site corporate pour une entreprise industrielle. Conception et intégration avec WordPress et Elementor, présentation des produits et services.",
-            "technologies": ["WordPress", "Elementor", "cPanel"],
+            "description": "Site corporate pour une entreprise industrielle. Conception et intégration avec WordPress et Divi, présentation des produits et services.",
+            "technologies": ["WordPress", "Divi", "JavaScript", "jQuery", "cPanel"],
             "image": "industrial"
         },
         {
@@ -76,7 +76,7 @@ portfolio_data = {
             "type": "Site E-commerce",
             "url": "https://codal-madagascar.com/taxibe-divers/madabio/",
             "description": "Boutique en ligne pour une marque de produits bio malgaches. Développé avec WordPress, Elementor et plugin e-commerce, gestion du catalogue via ACF.",
-            "technologies": ["WordPress", "Elementor", "E-commerce", "ACF", "cPanel"],
+            "technologies": ["WordPress", "Elementor", "JavaScript", "jQuery", "E-commerce", "ACF", "cPanel"],
             "image": "ecommerce"
         },
         {
